@@ -12,7 +12,7 @@ export const Experience = () => {
       period: "2025 – Present",
       shortDescription: "Backend-focused Full Stack Developer",
       description:
-        "Worked on web applications and backend systems using Django and Django REST Framework, with a focus on API development, database integration, and scalable backend solutions.",
+      "Developed and maintained web applications using Django and Django REST Framework, focusing on RESTful APIs, database integration, feature ownership, and functional testing. Collaborated with frontend developers and contributed to deployment and production support.",
       technologies: [
         "Python",
         "Django",
@@ -22,6 +22,8 @@ export const Experience = () => {
         "Celery",
         "React",
         "Docker",
+        "Wagtail",
+        "Linux",
       ],
     },
     {
@@ -46,7 +48,7 @@ export const Experience = () => {
       period: "2025",
       shortDescription: "Full Stack Django Bootcamp",
       description:
-        "Completed an intensive Full Stack Development bootcamp focused on building modern web applications using Django, REST APIs, databases, and frontend technologies.",
+        "Completed an intensive Full Stack Development bootcamp focused on building web applications using Django, REST APIs, databases, and frontend technologies.",
       technologies: [
         "Python",
         "Django",
@@ -55,7 +57,7 @@ export const Experience = () => {
         "HTML",
         "CSS",
         "JavaScript",
-      ],
+        ],
     },
     {
       title: "Software Tester",
