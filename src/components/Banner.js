@@ -19,12 +19,13 @@ export const Banner = () => {
 
 
   useEffect(() => {
-    let ticker = setInterval(() =>{
+    const  ticker = setInterval(() =>{
       tick();
 
     }, delta );
     return () => { clearInterval(ticker)};
-  }, [text])
+
+  }, [text]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const tick = () => {
     let i = loopNum % toRotate.length;
