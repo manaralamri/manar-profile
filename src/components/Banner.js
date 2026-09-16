@@ -58,7 +58,7 @@ export const Banner = () => {
          </span>
 
         <h1>
-          Hi,{" "}
+          {" "}
           <span className="txt-rotate">
             <span className="wrap">{text}</span>
           </span>
