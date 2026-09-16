@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
-import { FaLinkedinIn, FaGithub, FaEnvelope } from "react-icons/fa";
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaEnvelope,
+} from "react-icons/fa";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -37,103 +41,103 @@ export const NavBar = () => {
       expand="md"
       className={`portfolio-navbar ${scrolled ? "scrolled" : ""}`}
     >
-<Container>
+      <Container>
 
-  {/* Logo */}
-  <Navbar.Brand href="/" className="portfolio-logo">
-    Manar
-  </Navbar.Brand>
+        {/* Logo */}
+        <Navbar.Brand href="#home" className="portfolio-logo">
+          Manar
+        </Navbar.Brand>
 
-  {/* Mobile Menu Button */}
-  <Navbar.Toggle
-    aria-controls="portfolio-navbar-collapse"
-    aria-label="Toggle navigation"
-  >
-    <span className="navbar-toggler-icon"></span>
-  </Navbar.Toggle>
+        {/* Mobile Menu Button */}
+        <Navbar.Toggle
+          aria-controls="portfolio-navbar-collapse"
+          aria-label="Toggle navigation"
+        />
 
-  {/* Center Navigation */}
-  <Navbar.Collapse id="portfolio-navbar-collapse">
+        {/* Navigation */}
+        <Navbar.Collapse id="portfolio-navbar-collapse">
+          <Nav className="portfolio-nav-menu">
 
-    <Nav className="portfolio-nav-menu">
-      {navLinks.map((link) => (
-        <Nav.Link
-          key={link.id}
-          as={HashLink}
-          smooth
-          to={`#${link.id}`}
-          className={`portfolio-nav-link ${
-            activeLink === link.id ? "active" : ""
-          }`}
-          onClick={() => handleNavClick(link.id)}
-        >
-          {link.label}
-        </Nav.Link>
-      ))}
-    </Nav>
+            {/* Navigation Links */}
+            {navLinks.map((link) => (
+              <Nav.Link
+                key={link.id}
+                as={HashLink}
+                smooth
+                to={`#${link.id}`}
+                className={`portfolio-nav-link ${
+                  activeLink === link.id ? "active" : ""
+                }`}
+                onClick={() => handleNavClick(link.id)}
+              >
+                {link.label}
+              </Nav.Link>
+            ))}
 
-    {/* Social Icons - Mobile */}
-    <div className="navbar-social-icons mobile-social-icons">
-      <a
-        href="https://www.linkedin.com/in/manar-alamri1/"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="LinkedIn"
-      >
-        <FaLinkedinIn />
-      </a>
+            {/* Social Icons - Mobile */}
+            <div className="navbar-social-icons mobile-social-icons">
 
-      <a
-        href="https://github.com/ManarAlamri"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="GitHub"
-      >
-        <FaGithub />
-      </a>
+              <a
+                href="https://www.linkedin.com/in/manar-alamri1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
 
-      <a
-        href="https://mail.google.com/mail/?view=cm&fs=1&to=manaralamre33@gmail.com"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Email"
-      >
-        <FaEnvelope />
-      </a>
-    </div>
+              <a
+                href="https://github.com/ManarAlamri"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
 
-  </Navbar.Collapse>
+              <a
+                href="mailto:manaralamre33@gmail.com"
+                aria-label="Email"
+              >
+                <FaEnvelope />
+              </a>
 
-  {/* Social Icons - Desktop */}
-  <div className="navbar-social-icons desktop-social-icons">
-    <a
-      href="https://www.linkedin.com/in/manar-alamri1/"
-      target="_blank"
-      rel="noreferrer"
-      aria-label="LinkedIn"
-    >
-      <FaLinkedinIn />
-    </a>
+            </div>
 
-    <a
-      href="https://github.com/ManarAlamri"
-      target="_blank"
-      rel="noreferrer"
-      aria-label="GitHub"
-    >
-      <FaGithub />
-    </a>
+          </Nav>
+        </Navbar.Collapse>
 
-    <a
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=manaralamre33@gmail.com"
-      target="_blank"
-      rel="noreferrer"
-      aria-label="Email"
-    >
-      <FaEnvelope />
-    </a>
-  </div>
+        {/* Social Icons - Desktop */}
+        <div className="navbar-social-icons desktop-social-icons">
 
-</Container>    </Navbar>
+          <a
+            href="https://www.linkedin.com/in/manar-alamri1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedinIn />
+          </a>
+
+          <a
+            href="https://github.com/ManarAlamri"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </a>
+
+          <a
+            href="mailto:manaralamre33@gmail.com"
+            aria-label="Email"
+          >
+            <FaEnvelope />
+          </a>
+
+        </div>
+
+      </Container>
+    </Navbar>
   );
 };
