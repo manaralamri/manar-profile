@@ -12,9 +12,8 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random () * 100);
   const period = 2000;
   const toRotate = [
-  "Manar Alamri",
-  "Full Stack Developer",
-  "I Build Digital Experiences"
+  "Software Developer",
+  "Software Solutions"
 ];
 
 
@@ -64,10 +63,10 @@ export const Banner = () => {
           </span>
         </h1>
         <p dir="rtl">
-          Full Stack Developer passionate about turning ideas into clean, functional, 
-          and meaningful digital experiences. I build with Python, Django, 
-          REST APIs, and React, while continuously learning and exploring new technologies
-        </p>
+      Software Developer passionate about building clean, functional, and meaningful digital experiences. 
+      I specialize in Python, Django, REST APIs, and React, with experience in backend development, 
+      feature ownership, and functional testing.        
+      </p>
         <Col xs={12} md={6} xl={5} className="button-login-container">
 
                   </Col>
