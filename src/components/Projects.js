@@ -23,21 +23,25 @@ export const Projects = () => {
       title: "3D Learnland Island",
       description: "React & 3D Interactive Experience",
       imgUrl: projImg4,
+
     },
     {
       title: "GroupBuy",
       description: "E-Commerce / Group Buying Platform",
       imgUrl: projImg8,
+
     },
     {
       title: "RealEstate",
       description: "Real Estate Web Application",
       imgUrl: projImg2,
+
     },
     {
       title: "Emtathel",
       description: "Web Application",
       imgUrl: projImg3,
+
     },
   ];
 
