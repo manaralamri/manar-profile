@@ -1,20 +1,21 @@
 import { useState, useEffect } from "react";
 import { Col, Container , Row } from "react-bootstrap";
-import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/header-img.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { useNavigate } from 'react-router-dom'; //login page استيراد useNavigate
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setDeleting] = useState(false);
-  const navigate = useNavigate(); // تعريف navigate
 
-  const toRotate = ["Tech Tips", "Simplify Tech", "Discover Tech" ];
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random () * 100);
   const period = 2000;
+  const toRotate = [
+  "Manar Alamri",
+  "Full Stack Developer",
+  "I Build Digital Experiences"
+];
 
 
   useEffect(() => {
@@ -52,27 +53,22 @@ export const Banner = () => {
     <TrackVisibility>
     {({ isVisible}) => 
        <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-         <span className="tagline">Welcome to My Tech Tips Hub!
+         <span className="tagline">Welcome to my portfolio!
          </span>
 
-        <h1>{`Hi `} <span className="txt-rotate" dataPeriod="1000" data-rotate='["Tech Tips", "Simplify Tech", "Discover Tech" ]'><span className="wrap">{text}</span></span></h1>
-
+        <h1>
+          Hi,{" "}
+          <span className="txt-rotate">
+            <span className="wrap">{text}</span>
+          </span>
+        </h1>
         <p dir="rtl">
-        Discover the latest trends, tips, and tricks to make the most of technology. Whether you're a beginner or an expert, you'll find something valuable here:
-        Learn how to secure your online presence with tips and tools to protect your data.
-        Explore productivity tools that simplify your work and help you achieve your goals.
-        Stay updated with emerging technologies like AI, cloud computing, and more.
-        
+          Full Stack Developer passionate about turning ideas into clean, functional, 
+          and meaningful digital experiences. I build with Python, Django, 
+          REST APIs, and React, while continuously learning and exploring new technologies
         </p>
         <Col xs={12} md={6} xl={5} className="button-login-container">
 
-                    {/* الزر مع التوجيه إلى صفحة تسجيل الدخول عند النقر */}
-                    <button 
-                    className="button-login"
-                    onClick={() => navigate('/login')}
-                  >
-                  login 
-                  </button>
                   </Col>
       
     </div>}

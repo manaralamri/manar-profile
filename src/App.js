@@ -8,8 +8,8 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
-import { Login } from './components/Login';
-
+import { Experience } from './components/Experience';
+import { Certifications } from './components/Certifications';
 const HomePage = () => {
   return (
     <div className="App">
@@ -17,6 +17,8 @@ const HomePage = () => {
     <Banner />
     <Skills />
     <Projects />
+    <Experience />
+    <Certifications/>
     <Contact />
     <Footer />
 
@@ -30,10 +32,7 @@ function App() {
   return (
     <Router> {/* Wrap Routes inside Router */}
       <Routes>
-        {/* التوجيه إلى الصفحة الرئيسية */}
         <Route path="/" element={<HomePage />} />
-        {/* التوجيه إلى صفحة تسجيل الدخول */}
-        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
 
