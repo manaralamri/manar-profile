@@ -10,6 +10,7 @@ import {
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const email = "manaralamre33@gmail.com";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -129,8 +130,10 @@ export const NavBar = () => {
           </a>
 
           <a
-            href="mailto:manaralamre33@gmail.com"
-            aria-label="Email"
+    href={`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`}
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Email"
           >
             <FaEnvelope />
           </a>
